@@ -1,9 +1,20 @@
-var five = require('johnny-five');
-var board = new five.Board();
-
-var LEDPIN = 13;
+var five = require('johnny-five'),
+	board = new five.Board(),
+	led,
+	toggleStat = false;
  
 board.on("ready", function(){
-  var led = new five.Led(LEDPIN);
-  led.strobe();
+	console.log("\nboard ready");
+	led = new five.Led(13);
+
+	setInterval(toggleLed, 200);
+
+	function toggleLed(){
+		toggleStat = !toggleStat;
+
+		if(toggleStat) led.on();
+		else led.off();
+	}
 });
+
+console.log("\nwaitting for device to connect");
