@@ -1,7 +1,7 @@
 MUNIBOT
 =======
 
-I am really exciting with my new board Arduino DUE and this new project. 
+I am really excited with my new board Arduino DUE and this new project. 
 
 This is a ScreenShot of muy first program with node.js in johnny-five.
 
